@@ -16,7 +16,7 @@
                     </div>
                 </div>
 
-                <div class="flex gap-4 text-lg item-center">
+                <div class="flex gap-4 text-xl md:text-lg item-center">
                     <a href="#projects">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </a>
@@ -37,7 +37,7 @@
         </div>
     </header>
     <transition name="fade">
-        <div v-if="menu" class="fixed top-0 left-0 w-full h-[100svh] bg-neutral-950 z-100">
+        <div v-if="menu" class="fixed top-0 left-0 w-full h-[100svh] bg-neutral-950 z-[1001]">
             <button @click="toggleMenu" class="absolute text-lg top-8 right-6">
                 <i class="fa-solid fa-x"></i>
             </button>
