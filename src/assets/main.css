@@ -1,0 +1,31 @@
+@import "./base.css";
+
+body {
+  @apply bg-neutral-950 text-neutral-200;
+}
+
+.base {
+  @apply flex flex-col items-center;
+}
+
+/* transitions */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s;
+}
+.fade-enter-from,
+.fade-leave-to{
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.1s;
+}
+.slide-up-enter-from {
+  transform: translateY(60px);
+}
+.slide-up-leave-to {
+  transform: translateY(-60px);
+}
