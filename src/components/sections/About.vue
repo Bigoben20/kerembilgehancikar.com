@@ -7,7 +7,7 @@
       <div class="flex flex-col items-start gap-4">
         <div class="relative text-lg md:text-2xl z-[1]">
           <span class="">Kerem Bilgehan Çıkar</span>
-          <i class="absolute ml-2 text-green-500 top-1 -right-6 fa-solid fa-circle-check"></i>
+          <i class="absolute text-green-500 top-1 -right-8 fa-solid fa-circle-check"></i>
         </div>
         <span class="text-sm text-neutral-400">Fullstack Web Developer</span>
       </div>
@@ -20,7 +20,7 @@
       </span>
     </div>
     <div>
-      <button class="w-full px-6 py-2 text-lg text-center rounded-full bg-gradient-to-r from-lime-500 to-teal-500 hover:hue-rotate-30">
+      <button class="w-full px-6 py-2 text-lg text-center rounded-full bg-gradient-to-r from-lime-500 to-teal-500 active:hue-rotate-30">
         <span>Download CV</span>
         <i class="ml-2 fa-solid fa-download"></i>
       </button>

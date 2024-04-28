@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="base">
-    <div class="w-full max-w-4xl px-2 py-6">
+    <div class="w-full max-w-3xl px-2 py-6">
       <NavbarVue />
       <RouterView />
     </div>
