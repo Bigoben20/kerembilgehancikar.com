@@ -29,3 +29,27 @@ body {
 .slide-up-leave-to {
   transform: translateY(-60px);
 }
+
+/* Tooltip */
+.tooltip:hover {
+    filter: brightness(0.90);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 4px;
+
+  /* Position the tooltip */
+  position: absolute;
+  right: 28px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
