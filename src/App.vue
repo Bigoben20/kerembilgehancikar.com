@@ -6,9 +6,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="base">
-    <div class="w-full max-w-3xl px-2 py-6">
+    <div class="static w-full max-w-3xl py-6">
       <NavbarVue />
-      <RouterView />
+      <main id="main" class="px-2">
+        <RouterView />
+      </main>
     </div>
   </div>
 </template>

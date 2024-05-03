@@ -1,22 +1,22 @@
 <template>
-    <header class="w-full px-4 py-3 border rounded-lg border-neutral-800 bg-neutral-800/40 backdrop-blur-md">
+    <header class="navbar" :class="isSticky ? 'bg-neutral-900/70 py-6':'mx-2 rounded-lg bg-neutral-900 py-3'" id="header">
         <div>
             <nav class="flex items-center justify-between">
                 <div class="flex items-center gap-10">
-                    <router-link to="/" class="hoverGlow"><i class="fa-solid fa-house"></i></router-link>
-                    <div class="items-center hidden gap-10 md:flex">
-                        <a href="#projects" class="text-sm hoverGlow">Projects</a>
+                    <a href="#" class="text-xl hoverGlow md:text-base"><i class="fa-solid fa-house"></i></a>
+                    <div class="items-center hidden gap-10 text-lg md:flex md:text-sm">
+                        <a href="#projects" class=" hoverGlow">Projects</a>
                         <div class="w-[1px] h-6 bg-neutral-400"></div>
-                        <a href="#gallery" class="text-sm hoverGlowOrange hover:animate-hue-rotate">Gallery</a>
+                        <!-- <a href="#gallery" class=" hoverGlowOrange hover:animate-hue-rotate">Gallery</a> -->
                         <a href="https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="relative group">
-                            <div class="text-sm group-hover:text-indigo-200">Music</div>
-                            <div class="absolute top-0 left-0 invisible text-sm text-purple-300 group-hover:animate-music-beat group-hover:visible">Music</div>
+                            <div class=" group-hover:text-indigo-200">Music</div>
+                            <div class="absolute top-0 left-0 invisible text-purple-300 group-hover:animate-music-beat group-hover:visible">Music</div>
                         </a>
-                        <a href="https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg" class="text-sm hoverGlowRed">Youtube</a>
+                        <a href="https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg" class=" hoverGlowRed">Youtube</a>
                     </div>
                 </div>
 
-                <div class="flex gap-4 text-xl md:text-lg item-center">
+                <div class="flex gap-4 text-2xl md:text-lg item-center">
                     <a href="#projects">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </a>
@@ -58,14 +58,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 
 const menu = ref(false);
+const isSticky = ref(false);
 const links = ref([
-    { id: 1, text: "Home", url: "#", state: 0 },
-    { id: 2, text: "Projects", url: "#", state: 0 },
-    { id: 3, text: "Gallery", url: "#", state: 0 },
+    { id: 1, text: "Home", url: "/", state: 0 },
+    { id: 2, text: "Projects", url: "#projects", state: 0 },
+    // { id: 3, text: "Gallery", url: "#", state: 0 },
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
     { id: 5, text: "Youtube", url: "https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg", state: 0 },
 ]);
@@ -74,9 +75,28 @@ const links = ref([
 function toggleMenu() {
     menu.value = !menu.value;
 }
+
+onMounted(() => {
+    let main = document.getElementById("header");
+
+    window.addEventListener("scroll", (ev) => {
+        ev.preventDefault();
+        isSticky.value = document.body.scrollTop >= (main.offsetTop) || document.documentElement.scrollTop >= (main.offsetTop);
+        
+        // if (isSticky.value) {
+        //     main.classList.add("pt-12");
+        // } else {
+        //     main.classList.remove("pt-12");
+        // }
+    });
+});
 </script>
 
 <style scoped>
+.navbar {
+    @apply sticky top-[-1px] z-[100] px-4 border border-neutral-800 backdrop-blur-lg transition-all duration-100 ease-out;
+}
+
 .hoverGlow:hover {
     transition: all 0.1s ease-out;
     text-shadow: #ffffff 0px 0px 2px;

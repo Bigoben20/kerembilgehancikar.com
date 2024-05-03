@@ -110,4 +110,8 @@ const projects = ref([
 .card {
     @apply rounded-2xl hover:shadow-md p-4 hover:bg-gradient-to-br from-lime-500/10 to-teal-500/10;
 }
+
+img {
+    z-index: 1;
+}
 </style>

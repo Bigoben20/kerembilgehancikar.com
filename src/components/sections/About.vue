@@ -1,5 +1,5 @@
 <template>
-  <div class="py-10 space-y-6">
+  <div class="grid grid-cols-1 gap-10 py-6">
     <div class="flex items-center gap-6">
       <div class="w-20 h-20 overflow-hidden rounded-full md:w-40 md:h-40">
         <img :src="pp" alt="">
@@ -12,25 +12,24 @@
         <span class="text-sm text-neutral-400">Fullstack Web Developer</span>
       </div>
     </div>
-    <div class="">
-      <span class="text-sm text-justify md:text-base">
+    <div class="px-1">
+      <div class="text-sm text-justify md:text-base">
         Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +2 years of experience, I've worked on various projects, mastering both front-end and back-end
         technologies. I thrive in team environments, bringing creative problem-solving skills to the table. My goal is to deliver customized, user-friendly web solutions while prioritizing client
         satisfaction.
-      </span>
+      </div>
     </div>
-    <div>
-      <button class="w-full px-6 py-2 text-lg text-center rounded-full bg-gradient-to-r from-lime-500 to-teal-500 active:hue-rotate-30">
-        <span>Download CV</span>
-        <i class="ml-2 fa-solid fa-download"></i>
-      </button>
-    </div>
+    <a :href="cvEnPdf" download class="w-full px-6 py-2 text-lg text-center rounded-full bg-gradient-to-r from-lime-500 to-teal-500 active:hue-rotate-30">
+      <span>Download CV</span>
+      <i class="ml-2 fa-solid fa-download"></i>
+    </a>
+
   </div>
 </template>
 
 <script setup>
 import pp from '@/assets/images/kbc.jpeg'
-
+import cvEnPdf from '@/assets/cv/KeremBilgehanCIKAR_CV_EN.pdf'
 </script>
 
 <style></style>
