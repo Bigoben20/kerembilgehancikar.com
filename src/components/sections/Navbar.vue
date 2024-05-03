@@ -64,7 +64,7 @@ import { onMounted, ref } from "vue";
 const menu = ref(false);
 const isSticky = ref(false);
 const links = ref([
-    { id: 1, text: "Home", url: "/", state: 0 },
+    { id: 1, text: "Home", url: "#", state: 0 },
     { id: 2, text: "Projects", url: "#projects", state: 0 },
     // { id: 3, text: "Gallery", url: "#", state: 0 },
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
@@ -82,12 +82,6 @@ onMounted(() => {
     window.addEventListener("scroll", (ev) => {
         ev.preventDefault();
         isSticky.value = document.body.scrollTop >= (main.offsetTop) || document.documentElement.scrollTop >= (main.offsetTop);
-        
-        // if (isSticky.value) {
-        //     main.classList.add("pt-12");
-        // } else {
-        //     main.classList.remove("pt-12");
-        // }
     });
 });
 </script>
