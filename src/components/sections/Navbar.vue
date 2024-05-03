@@ -1,5 +1,5 @@
 <template>
-    <header class="navbar" :class="isSticky ? 'bg-neutral-900/70 py-6':'mx-2 rounded-lg bg-neutral-900 py-3'" id="header">
+    <header class="navbar" :class="isSticky ? 'bg-neutral-900/70 py-6 md:py-3 md:rounded':'mx-2 rounded-lg bg-neutral-900 py-3'" id="header">
         <div>
             <nav class="flex items-center justify-between">
                 <div class="flex items-center gap-10">
