@@ -37,14 +37,6 @@
 
 <script setup>
 import Pills from "@/components/components/Pills.vue"
-
-import sepoImg from "@/assets/images/projects/sepo.jpeg"
-import dashboardImg from "@/assets/images/projects/dashboard.jpeg"
-import tamamliyoImg from "@/assets/images/projects/tamamliyo.jpeg"
-import kirilmiyoImg from "@/assets/images/projects/tamamliyo.jpeg"
-import frpCharactersImg from "@/assets/images/projects/frp_characters.jpeg"
-import webApp from "@/assets/images/projects/web_app.jpeg"
-
 import { ref } from "vue";
 
 
@@ -55,7 +47,7 @@ const projects = ref([
         technologies:"HTML, CSS, PHP, JS, jQuery, Curl",
         description: "A website for obtaining travel insurance quotes and making insurance sales.",
         url: "https://www.seyahatpolicesi.com",
-        img: sepoImg,
+        img: "/src/assets/images/projects/sepo.jpeg",
         tags: ["completed","job"]
     },
     {
@@ -64,7 +56,7 @@ const projects = ref([
         technologies:"TailwindCSS, AlpineJS, Laravel, Livewire",
         description: "The dashboard page for Tamamliyo company, where partners, sales, and other controls can be managed. Ongoing developments are in progress.",
         url: "https://dashboard.tamamliyo.com",
-        img: dashboardImg,
+        img: "/src/assets/images/projects/dashboard.jpeg",
         tags: ["completed","job"]
     },
     {
@@ -73,7 +65,7 @@ const projects = ref([
         technologies: "HTML, CSS, PHP, JS, jQuery, Curl, TailwindCSS, AlpineJS",
         description: "A product sales page integrated into the Tamamliyo company website. Quotes can be received and sales can be made on this platform.",
         url: "https://tamamliyo.com",
-        img: tamamliyoImg,
+        img: "/src/assets/images/projects/tamamliyo.jpeg",
         tags: ["completed","job"]
     },
     {
@@ -82,7 +74,7 @@ const projects = ref([
         technologies:"Vue.js, TailwindCSS",
         description: "A platform where mobile phone dealers can sell mobile phone insurance for additional income. Ongoing developments are in progress.",
         url: "https://kirilmiyo.com",
-        img: kirilmiyoImg,
+        img: "/src/assets/images/projects/kirilmiyo.jpeg",
         tags: ["completed","job"]
     },
     {
@@ -91,7 +83,7 @@ const projects = ref([
         technologies:"Vue.js, TailwindCSS, Laravel, RestAPI",
         description: "A site where current exchange rates and news can be obtained through a free API service.",
         url: "https://github.com/Bigoben20/vue_dashboard",
-        img: webApp,
+        img: "/src/assets/images/projects/web_app.jpeg",
         tags: ["paused","personal"]
     },
     {
@@ -100,7 +92,7 @@ const projects = ref([
         technologies:"Vue.js, TailwindCSS, Laravel, Inertia",
         description: "A website for creating, editing, and deleting accounts and characters for a desktop role-playing game.",
         url: "https://github.com/Bigoben20/my_frp_characters",
-        img: frpCharactersImg,
+        img: "/src/assets/images/projects/frp_characters.jpeg",
         tags: ["paused","personal"]
     },
 ]);
