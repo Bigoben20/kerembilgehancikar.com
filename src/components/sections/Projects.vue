@@ -102,7 +102,7 @@ const projects = ref([
         description: "A website for creating, editing, and deleting accounts and characters for a desktop role-playing game.",
         url: "https://frp.kerembilgehancikar.com",
         img: frpCharactersImg,
-        tags: ["paused","personal"]
+        tags: ["completed","personal"]
     },
 ]);
 </script>
