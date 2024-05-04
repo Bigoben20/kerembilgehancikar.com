@@ -36,16 +36,17 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 import Pills from "@/components/components/Pills.vue"
 
-import sepoImg from "../../assets/images/projects/sepo.jpeg"
-import dashboardImg from "../../assets/images/projects/dashboard.jpeg"
-import tamamliyoImg from "../../assets/images/projects/tamamliyo.jpeg"
-import kirilmiyoImg from "../../assets/images/projects/tamamliyo.jpeg"
-import frpCharactersImg from "../../assets/images/projects/frp_characters.jpeg"
-import webApp from "../../assets/images/projects/web_app.jpeg"
+import sepoImg from "@/assets/images/projects/sepo.jpeg"
+import dashboardImg from "@/assets/images/projects/dashboard.jpeg"
+import tamamliyoImg from "@/assets/images/projects/tamamliyo.jpeg"
+import kirilmiyoImg from "@/assets/images/projects/tamamliyo.jpeg"
+import webApp from "@/assets/images/projects/web_app.jpeg"
+import frpCharactersImg from "@/assets/images/projects/frp_characters.jpeg"
 
-import { ref } from "vue";
 
 
 const projects = ref([
