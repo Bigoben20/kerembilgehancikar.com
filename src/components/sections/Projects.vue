@@ -100,7 +100,7 @@ const projects = ref([
         title: "My FRP Characters",
         technologies:"Vue.js, TailwindCSS, Laravel, Inertia",
         description: "A website for creating, editing, and deleting accounts and characters for a desktop role-playing game.",
-        url: "https://github.com/Bigoben20/my_frp_characters",
+        url: "https://frp.kerembilgehancikar.com",
         img: frpCharactersImg,
         tags: ["paused","personal"]
     },
