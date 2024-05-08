@@ -21,7 +21,7 @@
     </div>
     <div class="px-1">
       <div class="text-sm text-neutral-300">
-        <span class="mr-1 font-semibold tracking-wide">Email:</span><span class="select-all">k.bilge3817@gmail.com</span>
+        <span class="mr-1 font-semibold tracking-wide">Email:</span><span class="select-all">info@kerembilgehancikar.com</span>
       </div>
       <div v-if="false" class="text-sm text-neutral-300">
         <span class="mr-1 font-semibold tracking-wide">Phone:</span><span>+90 542 350 18 99</span>
