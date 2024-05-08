@@ -1,6 +1,6 @@
 <template>
     <div class="py-4" id="projects">
-        <div class="border-b border-neutral-400 text-neutral-400">
+        <div class="text-lg border-b border-neutral-400 text-neutral-400">
             <p>Projects</p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
