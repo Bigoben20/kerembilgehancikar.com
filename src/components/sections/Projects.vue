@@ -6,7 +6,7 @@
         <div class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
             <a :href="project.url" target="_blank" v-for="project in projects" :key="project.id" class="card">
                 
-                <div v-if="project.img" class="relative w-full overflow-hidden rounded-lg bg-neutral-200">
+                <div v-if="project.img" class="relative w-full mb-2 overflow-hidden rounded-lg bg-neutral-200">
                     <Pills :tag="project.tags[0]" class="absolute top-2 left-2 "/>
                     
                     <div class="absolute bottom-2 right-2 bg-stone-500 w-6 h-6 rounded-full text-[11px] flex items-center justify-center tooltip">
@@ -16,9 +16,9 @@
                     <img :src="`${project.img}`" alt="" />
                 </div>
                 <div v-else class="w-full h-40 rounded-lg bg-neutral-200"></div>
-                <span class="text-lg font-semibold break-words">
-                    {{ project.title }}
+                <span class="font-semibold">
                     <i class="text-blue-500 fa-solid fa-link"></i>
+                    {{ project.title }}
                 </span>
                 <div class="flex flex-col items-start gap-2 mt-2 text-xs text-neutral-400">
                     <div>
@@ -110,6 +110,10 @@ const projects = ref([
 <style scoped>
 .card {
     @apply rounded-2xl hover:shadow-md p-4 hover:bg-gradient-to-br from-lime-500/10 to-teal-500/10;
+}
+
+.card:hover {
+    cursor: alias;
 }
 
 img {
