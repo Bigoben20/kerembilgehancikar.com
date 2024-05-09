@@ -3,29 +3,30 @@
         <div class="text-lg border-b border-neutral-400 text-neutral-400">
             <p>Projects</p>
         </div>
-        <div class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
+        <div class="grid grid-cols-2 gap-2 mt-4 sm:grid-cols-3">
             <a :href="project.url" target="_blank" v-for="project in projects" :key="project.id" class="card">
                 
-                <div v-if="project.img" class="relative w-full mb-2 overflow-hidden rounded-lg bg-neutral-200">
-                    <Pills :tag="project.tags[0]" class="absolute top-2 left-2 "/>
+                <div v-if="project.img" class="relative w-full mb-1 overflow-hidden rounded-lg bg-neutral-200">
+                    <Pills :tag="project.tags[0]" class="absolute top-1 left-1 "/>
                     
-                    <div class="absolute bottom-2 right-2 bg-stone-500 w-6 h-6 rounded-full text-[11px] flex items-center justify-center tooltip">
+                    <div class="absolute bottom-1 right-1 bg-stone-500/80 w-6 h-6 rounded-full text-[11px] flex items-center justify-center tooltip">
                         <i class="fa-solid" :class="project.tags[1] == 'personal'?'fa-user':'fa-briefcase'"></i>
                         <span class="capitalize tooltiptext">{{ project.tags[1] }}</span>
                     </div>
                     <img :src="`${project.img}`" alt="" />
                 </div>
                 <div v-else class="w-full h-40 rounded-lg bg-neutral-200"></div>
-                <span class="font-semibold">
-                    <i class="text-blue-500 fa-solid fa-link"></i>
-                    {{ project.title }}
-                </span>
-                <div class="flex flex-col items-start gap-2 mt-2 text-xs text-neutral-400">
-                    <div>
+
+                <div class="flex flex-col items-start gap-2 p-1 text-neutral-400">
+                    <span class="font-semibold text-neutral-200">
+                        <i class="text-blue-500 fa-solid fa-link"></i>
+                        {{ project.title }}
+                    </span>
+                    <div class="text-xs ">
                         <span class="font-semibold text-neutral-300">Technologies: </span>
                         <span class="">{{ project.technologies }}</span>
                     </div>
-                    <div>
+                    <div class="text-xs ">
                         <span class="font-semibold text-neutral-300">Description: </span>
                         <span class="">{{ project.description }}</span>
                     </div>
@@ -109,11 +110,7 @@ const projects = ref([
 
 <style scoped>
 .card {
-    @apply rounded-2xl hover:shadow-md p-4 hover:bg-gradient-to-br from-lime-500/10 to-teal-500/10;
-}
-
-.card:hover {
-    cursor: alias;
+    @apply rounded-2xl hover:shadow-md p-2 hover:bg-gradient-to-br from-lime-500/10 to-teal-500/10;
 }
 
 img {

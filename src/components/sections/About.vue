@@ -1,11 +1,11 @@
 <template>
   <div class="grid grid-cols-1 gap-10 py-6">
     <div class="flex items-center gap-4 md:gap-6">
-      <div class="w-20 h-20 overflow-hidden rounded-full md:w-40 md:h-40">
+      <div class="w-20 h-20 overflow-hidden rounded-full sm:w-40 sm:h-40">
         <img :src="pp" alt="">
       </div>
       <div class="flex flex-col items-start gap-2">
-        <div class="relative text-lg md:text-[25px] z-[1]">
+        <div class="relative text-lg sm:text-[25px] z-[1]">
           <span class="">Kerem Bilgehan Çıkar</span>
           <i class="absolute text-green-500 top-1 -right-8 fa-solid fa-circle-check"></i>
         </div>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="px-1">
-      <div class="text-sm text-justify md:text-base">
+      <div class="text-sm text-justify sm:text-base">
         Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +2 years of experience, I've worked on various projects, mastering both front-end and back-end
         technologies. I thrive in team environments, bringing creative problem-solving skills to the table. My goal is to deliver customized, user-friendly web solutions while prioritizing client
         satisfaction.
