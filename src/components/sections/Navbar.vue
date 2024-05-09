@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="flex gap-4 text-2xl md:text-lg item-center">
-                    <a href="#projects">
+                    <a href="https://buymeacoffee.com/kbilgehancikar">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/kbilgehancikar/">
