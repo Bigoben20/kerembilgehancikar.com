@@ -37,7 +37,7 @@
         </div>
     </header>
     <transition name="fade">
-        <div v-if="menu" class="fixed top-0 left-0 w-full h-[100svh] bg-neutral-950 z-[1001]">
+        <div v-if="menu" class="fixed top-0 left-0 w-full h-[100vh] bg-neutral-950 z-[1001]">
             <button @click="toggleMenu" class="absolute text-lg top-8 right-6">
                 <i class="fa-solid fa-x"></i>
             </button>
