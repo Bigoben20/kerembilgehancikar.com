@@ -5,7 +5,7 @@ import ProjectsVue from "@/components/sections/Projects.vue";
 </script>
 
 <template>
-  <main class="min-h-screen">
+  <main class="h-full min-h-screen">
     <AboutView />
     <ProjectsVue />
   </main>
