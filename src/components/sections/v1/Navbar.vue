@@ -38,7 +38,7 @@
     </header>
     <transition name="fade">
         <div v-if="menu" class="fixed top-0 left-0 w-full h-[100vh] bg-neutral-950 z-[1001]">
-            <button @click="toggleMenu" class="absolute text-lg top-8 right-6">
+            <button @click="toggleMenu" class="absolute text-lg top-8 right-6 text-neutral-200">
                 <i class="fa-solid fa-x"></i>
             </button>
 
@@ -52,6 +52,13 @@
                         <span v-else class="absolute top-0 left-0" :class="{'text-indigo-400':link.id == 4, 'text-red-400':link.id == 5,}" :style="{'text-shadow': link.id == 4? 'rgb(99 102 241) 0px 0px 4px': link.id == 5? 'rgb(239 68 68) 0px 0px 4px': '#fff 0px 0px 1px'}">{{ link.text }}</span>
                     </transition>
                 </button>
+                
+                <div class="w-[320px] ">
+                    <router-link to="/" class="font-semibold tracking-wider uppercase text-neutral-400 hover:text-green-500">
+                        <span class="text-4xl">.v2</span>
+                        <i class="ml-1 text-2xl fa-solid fa-arrow-right"></i>
+                    </router-link>
+                </div>
             </div>
         </div>
     </transition>
@@ -70,7 +77,7 @@ const links = ref([
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
     { id: 5, text: "Youtube", url: "https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg", state: 0 },
 ]);
-
+const versionList = ref(false)
 
 function toggleMenu() {
     menu.value = !menu.value;
@@ -107,7 +114,7 @@ function goTo(id){
 
 <style scoped>
 .navbar {
-    @apply sticky top-[-1px] z-[100] px-4 border border-neutral-800 backdrop-blur-lg transition-all duration-100 ease-out;
+    @apply sticky top-[-1px] z-[100] px-4 border border-neutral-800 backdrop-blur-lg transition-all duration-100 ease-out  text-neutral-200;
 }
 
 .hoverGlow:hover {

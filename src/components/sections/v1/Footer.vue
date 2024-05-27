@@ -1,5 +1,5 @@
 <template>
-<div class="absolute bottom-0 left-0 flex justify-center w-full p-2 rounded-t bg-neutral-900">
+<div class="absolute bottom-0 left-0 flex justify-center w-full p-2 rounded-t bg-neutral-900 text-neutral-200">
     <div class="flex items-center justify-between w-full max-w-3xl px-4 text-sm">
         <span>
             © Kerem Bilgehan Çıkar - 2024
