@@ -13,12 +13,17 @@ export default {
         'hue-rotate': {
           '0%, 100%': { filter: 'hue-rotate(0deg)' },
           '50%': { filter: 'hue-rotate(181deg)' },
+        },
+        blink: {
+          '0%, 15%, 85%, 100%': { opacity: 0 },
+          '16%, 84%': {opacity: 1}
         }
       },
       animation: {
         'music-beat': 'beats 0.75s ease-in-out infinite',
         'hue-rotate': 'hue-rotate 5s linear infinite',
         'spin-slow': 'spin 1s linear infinite',
+        'blink': 'blink 1s linear infinite',
       }
     },
   },
