@@ -6,13 +6,13 @@
                     <button @click="toggleMenu" class="nav-button" title="Menu">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <a href="https://buymeacoffee.com/kbilgehancikar" class="nav-link" title="Buy Me a Coffee">
+                    <a href="https://buymeacoffee.com/kbilgehancikar" class="nav-link" target="_blank" title="Buy Me a Coffee">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/kbilgehancikar/" class="nav-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/kbilgehancikar/" class="nav-link" target="_blank" title="LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Bigoben20" class="nav-link" title="GitHub">
+                    <a href="https://github.com/Bigoben20" class="nav-link" target="_blank" title="GitHub">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
