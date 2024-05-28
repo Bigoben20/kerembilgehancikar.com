@@ -3,6 +3,20 @@ import AboutView from "@/components/sections/v1/About.vue";
 import ProjectsVue from "@/components/sections/v1/Projects.vue";
 import NavbarVue from '@/components/sections/v1/Navbar.vue';
 import FooterVue from "@/components/sections/v1/Footer.vue";
+import { onMounted, ref } from "vue";
+
+const loading = ref(0);
+onMounted(() => {
+  let interval = setInterval(() => {
+    loading.value++;
+
+    if (loading.value == 100) {
+      clearInterval(interval);
+    }
+  }, 14);
+})
+
+
 </script>
 
 <template>
@@ -17,5 +31,15 @@ import FooterVue from "@/components/sections/v1/Footer.vue";
     </div>
   
     <FooterVue />
+
   </div>
+
+  <transition name="fade">
+    <div v-if="loading < 100" class="fixed z-[1100] top-0 left-0 w-full h-full bg-neutral-900 flex flex-col justify-center items-center">
+      <span class="text-neutral-300">Loading...</span>
+      <div class="w-full h-0.5 bg-neutral-800 mt-4">
+        <div :style="'width:'+loading+'%'" class="h-full bg-white"></div>
+      </div>
+    </div>
+  </transition>
 </template>
