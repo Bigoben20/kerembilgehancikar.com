@@ -21,13 +21,13 @@
     </div>
     <div class="px-1">
       <div class="text-sm text-neutral-300">
-        <span class="mr-1 font-semibold tracking-wide">Email:</span><span class="select-all">info@kerembilgehancikar.com</span>
+        <span class="mr-1 font-semibold tracking-wide">Email:</span><span class="select-all hover:cursor-pointer hover:text-lime-500">info@kerembilgehancikar.com</span>
       </div>
       <div v-if="false" class="text-sm text-neutral-300">
         <span class="mr-1 font-semibold tracking-wide">Phone:</span><span>+90 542 350 18 99</span>
       </div>
     </div>
-    <a :href="cvEnPdf" download class="w-full px-6 py-2 text-lg text-center rounded-full bg-gradient-to-r from-lime-500 via-green-500 to-teal-500 hover:hue-rotate-30 active:hue-rotate-60">
+    <a :href="cvEnPdf" download class="w-full px-6 py-2 text-lg text-center transition-all duration-100 ease-in rounded-full bg-gradient-to-r from-lime-500 via-cyan-500 to-lime-500 hover:hue-rotate-30 active:hue-rotate-60">
       <span>Download CV</span>
       <i class="ml-2 fa-solid fa-download"></i>
     </a>
