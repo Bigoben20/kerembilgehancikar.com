@@ -3,11 +3,11 @@
         <div>
             <nav class="flex items-center justify-between">
                 <div class="flex items-center gap-8">
-                    <button @click="goTo('app')" class="text-xl hoverGlow md:text-base"><i class="fa-solid fa-house"></i></button>
+                    <button @click="goTo('app')" class="text-xl hoverGlowPrimary md:text-base"><i class="fa-solid fa-house"></i></button>
                     <div class="items-center hidden gap-8 text-lg md:flex md:text-sm">
                         <button @click="goTo('projects')" class=" hoverGlow">Projects</button>
                         <div class="w-[1px] h-6 bg-neutral-400"></div>
-                        <!-- <a href="#gallery" class=" hoverGlowOrange hover:animate-hue-rotate">Gallery</a> -->
+                        <button @click="goTo('https://blog.kerembilgehancikar.com')" class="hoverGlowOrange">Blog</button>
                         <button @click="goTo('https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing')" class="relative group">
                             <div class=" group-hover:text-indigo-200">Music</div>
                             <div class="absolute top-0 left-0 invisible text-purple-300 group-hover:animate-music-beat group-hover:visible">Music</div>
@@ -17,18 +17,18 @@
                 </div>
 
                 <div class="flex gap-4 text-2xl md:text-lg item-center">
-                    <a href="https://buymeacoffee.com/kbilgehancikar">
+                    <a href="https://buymeacoffee.com/kbilgehancikar" class="hoverGlowPrimary">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/kbilgehancikar/">
+                    <a href="https://www.linkedin.com/in/kbilgehancikar/" class="hoverGlowPrimary">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Bigoben20">
+                    <a href="https://github.com/Bigoben20" class="hoverGlowPrimary">
                         <i class="fa-brands fa-github"></i>
                     </a>
                     <div class="flex items-center gap-4">
                         <div class="w-[1px] h-6 bg-neutral-400"></div>
-                        <button @click="toggleMenu">
+                        <button @click="toggleMenu" class="hoverGlowPrimary">
                             <i class="fa-solid fa-bars"></i>
                         </button>
                     </div>
@@ -73,7 +73,7 @@ const isSticky = ref(false);
 const links = ref([
     { id: 1, text: "Home", url: "app", state: 0 },
     { id: 2, text: "Projects", url: "projects", state: 0 },
-    // { id: 3, text: "Gallery", url: "#", state: 0 },
+    { id: 3, text: "Blog", url: "https://blog.kerembilgehancikar.com", state: 0 },
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
     { id: 5, text: "Youtube", url: "https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg", state: 0 },
 ]);
@@ -122,10 +122,16 @@ function goTo(id){
     text-shadow: #ffffff 0px 0px 2px;
 }
 
+.hoverGlowPrimary:hover {
+    transition: all 0.1s ease-out;
+    text-shadow: #bfff71 0px 0px 2px;
+    color: #bfff71 ;
+}
+
 .hoverGlowOrange:hover {
     transition: all 0.1s ease-out;
-    text-shadow: #ead432 0px 0px 2px;
-    color: #efe6a0;
+    text-shadow: #32b3ea 0px 0px 2px;
+    color: #a0c6ef;
 }
 
 .hoverGlowRed:hover {

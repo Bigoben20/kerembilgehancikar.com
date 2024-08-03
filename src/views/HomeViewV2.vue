@@ -13,7 +13,7 @@ onMounted(() => {
     if (loading.value == 100) {
       clearInterval(interval);
     }
-  }, 14);
+  }, 8);
 })
 
 
