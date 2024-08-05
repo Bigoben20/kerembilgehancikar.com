@@ -7,7 +7,7 @@
                     <div class="items-center hidden gap-8 text-lg md:flex md:text-sm">
                         <button @click="goTo('projects')" class=" hoverGlow">Projects</button>
                         <div class="w-[1px] h-6 bg-neutral-400"></div>
-                        <button @click="goTo('https://blog.kerembilgehancikar.com')" class="hoverGlowOrange">Blog</button>
+                        <a href="https://blog.kerembilgehancikar.com" class="hoverGlowOrange">Blog</a>
                         <button @click="goTo('https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing')" class="relative group">
                             <div class=" group-hover:text-indigo-200">Music</div>
                             <div class="absolute top-0 left-0 invisible text-purple-300 group-hover:animate-music-beat group-hover:visible">Music</div>
