@@ -2,7 +2,7 @@
   <nav class="flex items-center gap-8">
     <!-- Desktop Navigation -->
     <div class="items-center hidden gap-6 md:flex">
-      <button @click="scrollToProjects" class="nav-link">Projects</button>
+      <button @click="scrollToProjects()" class="nav-link">Projects</button>
       <a href="https://blog.kerembilgehancikar.com" target="_blank" class="nav-link">Blog</a>
       <a href="https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" 
         target="_blank" class="nav-link">Music</a>

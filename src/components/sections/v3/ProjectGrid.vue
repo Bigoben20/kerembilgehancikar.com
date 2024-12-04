@@ -1,6 +1,6 @@
 <template>
-  <div class="col-span-full">
-    <div class="mb-8">
+  <div class="mt-4 col-span-full" id="projects">
+    <div class="mb-4">
       <h2 class="mb-2 font-serif text-2xl">Projects</h2>
       <div class="pb-2 overflow-x-auto hide-scrollbar">
         <div class="flex gap-2 w-fit">

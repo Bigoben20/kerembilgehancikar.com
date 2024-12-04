@@ -28,6 +28,7 @@ const skills = [
       { name: "Vue.js", level: 85 },
       { name: "TailwindCSS", level: 95 },
       { name: "JavaScript", level: 90 },
+      { name: "Jquery", level: 85 },
       { name: "React", level: 50 }
     ]
   },
@@ -38,6 +39,23 @@ const skills = [
       { name: "Laravel", level: 85 },
       { name: "MySQL", level: 75 },
       { name: "RestAPI", level: 80 }
+    ]
+  },
+  {
+    name: "Social",
+    items: [
+      { name: "Humour", level: 95 },
+    ]
+  },
+  {
+    name: "Ability Scores",
+    items: [
+      { name: "Strength", level: 70 },
+      { name: "Constitution", level: 75 },
+      { name: "Dexterity", level: 70 },
+      { name: "Intelligence", level: 85 },
+      { name: "Wisdom", level: 70 },
+      { name: "Charisma", level: 85 }
     ]
   }
 ]

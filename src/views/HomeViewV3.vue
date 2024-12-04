@@ -28,7 +28,7 @@
         <h2 class="mb-6 font-serif text-3xl lg:text-4xl">Fullstack<br/>Developer<br/><em>Portfolio</em></h2>
         <p class="mb-4 text-xs text-stone-400">Web Development & RestfulAPI</p>
         <p class="text-sm leading-relaxed text-stone-300">
-          Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +2 years of experience, 
+          Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +3 years of experience, 
           I've worked on various projects, mastering both front-end and back-end technologies. I thrive in team 
           environments, bringing creative problem-solving skills to the table.
         </p>
