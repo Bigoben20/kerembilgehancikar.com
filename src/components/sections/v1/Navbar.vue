@@ -25,8 +25,9 @@
                         </template>
 
                         <template #content>
-                            <div class="px-2">
-                                <router-link to="/" class="text-black bg-green-500">.v2</router-link>
+                            <div class="px-2 flex flex-col gap-2">
+                                <router-link to="/" class="text-black bg-green-500">.v3</router-link>
+                                <router-link to="/v2" class="text-black bg-green-500">.v2</router-link>
                             </div>
                         </template>
                     </Dropdown>
@@ -38,7 +39,6 @@
         <div v-if="menu" class="fixed top-0 left-0 w-full h-[100vh] bg-neutral-950 z-[1001]">
             
             <div class="flex flex-col items-start justify-center h-full gap-8 px-4 offCanvas sm:px-10">
-                <!-- hover ile state kontrolü, state'e göre class değişiklikleri, slide-up transitions -->
                 <button v-for="link in links" :key="link.id" @click="goTo(link.url)" @mouseenter="link.state = 1" @mouseleave="link.state = 0"
                     class="menu-links hoverV2">
                     <span class="">{{ link.text }}</span>
@@ -63,11 +63,9 @@ const isSticky = ref(false);
 const links = ref([
     { id: 1, text: "Home", url: "app", state: 0 },
     { id: 2, text: "Projects", url: "projects", state: 0 },
-    // { id: 3, text: "Gallery", url: "#", state: 0 },
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
     { id: 5, text: "Youtube", url: "https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg", state: 0 },
 ]);
-
 
 function toggleMenu() {
     menu.value = !menu.value;
@@ -83,7 +81,6 @@ onMounted(() => {
 });
 
 function goTo(id){
-
     if (menu.value) {
         menu.value = false;
     }
@@ -97,8 +94,6 @@ function goTo(id){
             behavior: 'smooth'
         });
     }
-    
-
 }
 </script>
 

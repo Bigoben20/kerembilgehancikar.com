@@ -43,7 +43,6 @@
             </button>
 
             <div class="flex flex-col items-center justify-center h-full gap-8 offCanvas" @click.self="toggleMenu">
-                <!-- hover ile state kontrolü, state'e göre class değişiklikleri, slide-up transitions -->
                 <button v-for="link in links" :key="link.id" @click="goTo(link.url)" @mouseenter="link.state = 1" @mouseleave="link.state = 0"
                     class="relative w-[320px] h-[60px] overflow-hidden transition-colors duration-100 menu-links"
                     :class="[links.some(item => item.state == 1) && link.state != 1 ? 'text-neutral-500' : 'text-neutral-100']">
@@ -53,10 +52,12 @@
                     </transition>
                 </button>
                 
-                <div class="w-[320px] ">
+                <div class="w-[320px] flex gap-4">
+                    <router-link to="/" class="font-semibold tracking-wider uppercase text-neutral-400 hover:text-lime-500">
+                        <span class="text-4xl">.v3</span>
+                    </router-link>
                     <router-link to="/v1" class="font-semibold tracking-wider uppercase text-neutral-400 hover:text-green-500">
                         <span class="text-4xl">.v1</span>
-                        <i class="ml-1 text-2xl fa-solid fa-arrow-right"></i>
                     </router-link>
                 </div>
             </div>
@@ -67,7 +68,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-
 const menu = ref(false);
 const isSticky = ref(false);
 const links = ref([
@@ -77,7 +77,6 @@ const links = ref([
     { id: 4, text: "Music", url: "https://soundcloud.com/bigoben?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", state: 0 },
     { id: 5, text: "Youtube", url: "https://www.youtube.com/channel/UC_bRlwqiRNB4xWJoUCqPFvg", state: 0 },
 ]);
-const versionList = ref(false)
 
 function toggleMenu() {
     menu.value = !menu.value;
@@ -93,7 +92,6 @@ onMounted(() => {
 });
 
 function goTo(id){
-
     if (menu.value) {
         menu.value = false;
     }
@@ -107,8 +105,6 @@ function goTo(id){
             behavior: 'smooth'
         });
     }
-    
-
 }
 </script>
 
