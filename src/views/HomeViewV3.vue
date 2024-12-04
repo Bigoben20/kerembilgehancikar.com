@@ -13,7 +13,7 @@
           <!-- Profile Image Circle for Mobile -->
           <div class="absolute inset-0 md:hidden">
             <div class="w-full h-full overflow-hidden border-2 rounded-full border-stone-200">
-              <img :src="pp" alt="Profile" class="object-cover w-full h-full">
+              <img :src="pp" alt="Profile" class="object-cover w-full h-full sepia">
             </div>
           </div>
           <!-- Year Circle for Desktop -->
@@ -38,7 +38,7 @@
       
       <!-- Profile Image Section (visible only on desktop) -->
       <div class="hidden overflow-hidden rounded-lg opacity-0 md:block bg-stone-100/10 col-span-full md:col-span-1 animate-slide-up" style="animation-delay: 600ms">
-        <img :src="pp" alt="Profile" class="object-cover w-full h-full">
+        <img :src="pp" alt="Profile" class="object-cover w-full h-full sepia">
       </div>
       
       <div class="flex flex-col justify-between p-8 rounded-lg opacity-0 bg-stone-100/10 col-span-full md:col-span-1 animate-slide-up" style="animation-delay: 800ms">
@@ -80,7 +80,7 @@ import ExperienceTimeline from '@/components/sections/v3/ExperienceTimeline.vue'
 import StatsGrid from '@/components/sections/v3/StatsGrid.vue'
 import SocialLink from '@/components/sections/v3/SocialLink.vue'
 import ScrollToTop from '@/components/sections/v3/ScrollToTop.vue'
-import pp from '@/assets/images/kbc.jpeg'
+import pp from '@/assets/images/kbc.jpg'
 import cvEnPdf from '@/assets/cv/KeremBilgehanCIKAR_CV_EN.pdf'
 
 const currentYear = computed(() => new Date().getFullYear())
