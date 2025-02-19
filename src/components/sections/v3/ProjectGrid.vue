@@ -4,22 +4,16 @@
       <h2 class="mb-2 font-serif text-2xl">Projects</h2>
       <div class="pb-2 overflow-x-auto hide-scrollbar">
         <div class="flex gap-2 w-fit">
-          <button 
-            v-for="filter in filters" 
-            :key="filter"
-            @click="activeFilter = filter"
-            class="px-3 py-1 text-sm transition-colors rounded-full whitespace-nowrap"
+          <button v-for="filter in filters" :key="filter" @click="activeFilter = filter" class="px-3 py-1 text-sm transition-colors rounded-full whitespace-nowrap"
             :class="activeFilter === filter ? 'bg-stone-100 text-stone-900' : 'bg-stone-800 text-stone-300 hover:bg-stone-700'">
             {{ filter }}
           </button>
         </div>
       </div>
     </div>
-    
+
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <div v-for="project in filteredProjects" 
-        :key="project.id" 
-        class="group">
+      <div v-for="project in filteredProjects" :key="project.id" class="group">
         <ProjectCard :project="project" />
       </div>
     </div>
@@ -63,7 +57,7 @@ const projects = ref([
     title: "Dashboard Tamamliyo",
     technologies: "TailwindCSS, AlpineJS, Laravel, Livewire",
     description: "The dashboard page for Tamamliyo company, where partners, sales, and other controls can be managed.",
-    url: "https://dashboard.tamamliyo.com",
+    url: "/",
     img: dashboardImg,
     tags: ["completed", "job"]
   },
@@ -90,7 +84,7 @@ const projects = ref([
     title: "Vue Web App",
     technologies: "Vue.js, TailwindCSS, Laravel, RestAPI",
     description: "A site where current exchange rates and news can be obtained through a free API service.",
-    url: "https://github.com/Bigoben20/vue_dashboard",
+    url: "/",
     img: webApp,
     tags: ["paused", "personal"]
   },
@@ -105,7 +99,7 @@ const filteredProjects = computed(() => {
     'Personal': 'personal',
     'Job': 'job'
   }
-  return projects.value.filter(project => 
+  return projects.value.filter(project =>
     project.tags.includes(filterMap[activeFilter.value])
   )
 })
@@ -113,11 +107,14 @@ const filteredProjects = computed(() => {
 
 <style scoped>
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none;
+  /* Chrome, Safari and Opera */
 }
 </style>

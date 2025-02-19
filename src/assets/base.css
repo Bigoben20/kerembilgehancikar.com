@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,3 +7,26 @@
 * {
   font-family: "Roboto Mono", monospace;
 }
+
+/* Custom Scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-500/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-700/70;
+}
+
+
+html {
+  scroll-behavior: smooth;
+} 
+*/

@@ -2,8 +2,11 @@
   <div class="min-h-screen p-4 bg-neutral-900 text-stone-200">
     <div class="grid grid-cols-1 gap-4 mx-auto max-w-7xl md:grid-cols-2 lg:grid-cols-3">
       <!-- Header -->
-      <div class="flex items-center justify-between p-6 rounded-lg opacity-0 col-span-full bg-stone-100/10 animate-fade-in">
+      <div class="flex items-center justify-between px-6 py-4 rounded-lg opacity-0 md:p-6 col-span-full bg-stone-100/10 animate-fade-in">
         <h1 class="font-serif text-lg lg:text-2xl">Kerem Bilgehan ÇIKAR</h1>
+        <!-- <div class="block lg:hidden overflow-hidden rounded-md h-[28px] md:h-[84px]">
+          <Logo />
+        </div> -->
         <Navigation />
       </div>
 
@@ -25,22 +28,23 @@
             </div>
           </div>
         </div>
-        <h2 class="mb-6 font-serif text-3xl lg:text-4xl">Fullstack<br/>Developer<br/><em>Portfolio</em></h2>
+        <h2 class="hidden mb-6 font-serif text-3xl lg:text-4xl lg:block">Fullstack<br />Developer<br /><em>Portfolio</em></h2>
+        <h2 class="mb-6 font-serif text-2xl sm:text-4xl lg:hidden">Kerem Bilgehan<br />Çıkar<br /><em>Portfolio</em></h2>
         <p class="mb-4 text-xs text-stone-400">Web Development & RestfulAPI</p>
         <p class="text-sm leading-relaxed text-stone-300">
-          Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +3 years of experience, 
-          I've worked on various projects, mastering both front-end and back-end technologies. I thrive in team 
+          Hello! I'm Bilgehan, a passionate web developer with a keen eye for design. With +{{ howManyYears }} years of experience,
+          I've worked on various projects, mastering both front-end and back-end technologies. I thrive in team
           environments, bringing creative problem-solving skills to the table.
         </p>
       </div>
 
       <StatsGrid class="opacity-0 animate-slide-up" style="animation-delay: 400ms" />
-      
+
       <!-- Profile Image Section (visible only on desktop) -->
       <div class="hidden overflow-hidden rounded-lg opacity-0 md:block bg-stone-100/10 col-span-full md:col-span-1 animate-slide-up" style="animation-delay: 600ms">
         <img :src="pp" alt="Profile" class="object-cover w-full h-full sepia">
       </div>
-      
+
       <div class="flex flex-col justify-between p-8 rounded-lg opacity-0 bg-stone-100/10 col-span-full md:col-span-1 animate-slide-up" style="animation-delay: 800ms">
         <div>
           <h3 class="mb-4 font-serif text-2xl">Contact <em>me</em></h3>
@@ -82,8 +86,14 @@ import SocialLink from '@/components/sections/v3/SocialLink.vue'
 import ScrollToTop from '@/components/sections/v3/ScrollToTop.vue'
 import pp from '@/assets/images/kbc.jpg'
 import cvEnPdf from '@/assets/cv/KeremBilgehanCIKAR_CV_EN.pdf'
+import Logo from '@/components/components/Logo.vue'
+import { useStore } from 'vuex'
 
-const currentYear = computed(() => new Date().getFullYear())
+const store = useStore()
+const howManyYears = computed(() => {
+  return store.getters.howManyYears || 4
+})
+const currentYear = new Date().getFullYear()
 </script>
 
 <style>
@@ -91,6 +101,7 @@ const currentYear = computed(() => new Date().getFullYear())
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -101,6 +112,7 @@ const currentYear = computed(() => new Date().getFullYear())
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

@@ -5,11 +5,9 @@
       <div v-for="(category, index) in skills" :key="index">
         <h4 class="mb-2 text-sm font-medium text-stone-300">{{ category.name }}</h4>
         <div class="space-y-2">
-          <div v-for="skill in category.items" :key="skill.name" 
-            class="flex items-center gap-2">
+          <div v-for="skill in category.items" :key="skill.name" class="flex items-center gap-2">
             <div class="w-full bg-stone-800 rounded-full h-1.5">
-              <div class="bg-stone-300 h-1.5 rounded-full" 
-                :style="{ width: `${skill.level}%` }">
+              <div class="bg-stone-300 h-1.5 rounded-full" :style="{ width: `${skill.level}%` }">
               </div>
             </div>
             <span class="text-xs text-stone-400 min-w-[80px]">{{ skill.name }}</span>
@@ -53,8 +51,8 @@ const skills = [
       { name: "Strength", level: 70 },
       { name: "Constitution", level: 75 },
       { name: "Dexterity", level: 70 },
-      { name: "Intelligence", level: 85 },
-      { name: "Wisdom", level: 70 },
+      { name: "Intelligence", level: 80 },
+      { name: "Wisdom", level: 85 },
       { name: "Charisma", level: 85 }
     ]
   }
